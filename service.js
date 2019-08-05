@@ -31,7 +31,7 @@ var server = http.createServer(function(request, response){
 
       <body>
          <h1>你好,nodejs</h1>
-         <script src="/index"></script>
+         <script src="/main"></script>
       </body>
     `)
     response.end()
@@ -43,7 +43,7 @@ var server = http.createServer(function(request, response){
         h1{color: red}
     `)
     response.end()
-  }else if (path === '/index'){
+  }else if (path === '/main'){
     response.statusCode = 200
     response.setHeader('Content-Type', 'text/javascript;charset=utf-8')
     response.write(`
