@@ -7,4 +7,7 @@
 - http-server 的使用方法
 - localStorage
 
-### 功能：点击键盘上的字母，打开对应的网站
+### 功能
+- 点击键盘上的字母，新窗口打开对应的网站
+- 让用户编辑 hash
+- localStorage
