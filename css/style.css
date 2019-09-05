@@ -1,89 +1,9 @@
-body,div,kbd,button {
-    padding: 0;
-    margin: 0;
-}
-html {
-    background: url(../images/bg.gif);
-}
-body {
-    font: 12px 'Microsoft YaHei',SimSun,Helvetica,Tahoma,Arial,sans-serif!important;
-    background: url(../images/bg.jpg) no-repeat 10% 130px;
-    color: #666;
-}
-#header-wrap {
-    position: relative;
-    height: 90px;
-    background-color: #000;
-}
-#header-wrap:before {
-    content: '';
+*{margin: 0; padding: 0;}
+a{text-decoration: none;}
+kbd{border: 1px solid red;width:4em; height: 4em; display: inline-block; text-transform: uppercase; position: relative; }
+kbd > button{
     position: absolute;
-    width: 100%;
-    left: 0;
-    bottom: -1px;
-    text-align: center;
-    overflow: hidden;
-    height: 1px;
-    background: -webkit-linear-gradient(left,rgba(255,255,255,0) 0%,rgba(255,255,255,1) 30%),
-
-}
-#header {
-    width: 902px;
-    margin: 0 auto;
-}
-#header-wrap:after { 
-    content: '';
-    position: absolute;
-    width:100%;
-    height: 80px;
-    left: 0;
-    bottom: -30px;
-    z-index: -1;
-    text-align: center;
-    background: -webkit-linear-gradient(center,ellipse cover,rgba(153,153,153,0.65) 0%,rgba(153,153,153,0),76%);
-}
-main {
-    text-align: center;
-    margin-top: 350px;
-}
-#main {
-    display: inline-block;
-    padding: 10px 20px;
-    height: 50px;
-    text-align: center;
-}
-kbd {
-    position:relative;
-	display:inline-block;
-	margin-right:1em;
-	font-family:Frutiger,Helvetica,sans-serif;
-	font-size:16px;
-	padding:1em 1.5em;
-	color:#999;
-	text-decoration:none;
-	text-shadow:0 1px 0 rgba(255,255,255,.75);
-	-moz-border-radius:5px;
-	-webkit-border-radius:5px;
-	border-radius:5px;
-	border-top:1px solid #fff;
-	border-bottom:1px solid #eee;
-	-webkit-box-shadow:inset 0 0 2em rgba(0,0,0,.05), 0 3px 0 #ddd, 0 3px 2px rgba(0,0,0,.5);
-	-moz-box-shadow:inset 0 0 2em rgba(0,0,0,.05), 0 3px 0 #ddd, 0 3px 2px rgba(0,0,0,.5);
-	box-shadow:inset 0 0 2em rgba(0,0,0,.05), 0 3px 0 #ddd, 0 3px 2px rgba(0,0,0,.5);
-	background: #ffffff;
-	background: -moz-radial-gradient(center, ellipse cover,  #ffffff 16%, #f6f6f6 75%, #ededed 100%);
-	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(16%,#ffffff), color-stop(75%,#f6f6f6), color-stop(100%,#ededed));
-	background: -webkit-radial-gradient(center, ellipse cover,  #ffffff 16%,#f6f6f6 75%,#ededed 100%);
-	background: -o-radial-gradient(center, ellipse cover,  #ffffff 16%,#f6f6f6 75%,#ededed 100%);
-	background: -ms-radial-gradient(center, ellipse cover,  #ffffff 16%,#f6f6f6 75%,#ededed 100%);
-	background: radial-gradient(center, ellipse cover,  #ffffff 16%,#f6f6f6 75%,#ededed 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=1 );
-    text-transform: uppercase;
-    margin-bottom: 2em;
-}
-kbd > button {
-    position: absolute;
-    left: 0.3em;
+    right: 0.3em;
     top: 0.3em;
     display: inline-block;
     width: 16px;
@@ -97,12 +17,22 @@ kbd > button {
     background-color: orange;
     display: none;
 }
-kbd:hover > button {
-    display: inline-block;
+kbd:hover > button{display: inline-block; }
+body{background: grey url(../images/wall.jpg) no-repeat center center; }
+main{text-align: center; display: flex; justify-content: center; align-items: center; height: 100vh; }
+#main{display: inline-block;; }
+#main> div:nth-child(2){margin-left: -22px; }
+#main> div:nth-child(3){margin-left: -80px; }
+.wrapper{
+	background: rgba(255,255,255,0.2);
+	border-radius: 10px;
 }
-#main > div:nth-child(2) {
-    margin-left: 1em;
-}
-#main > div:nth-child(3) {
-    margin-left: 2em;
-}
+.key{width: 50px; height: 40px; background: linear-gradient(to bottom, #292929 0%,#111111 100%); 
+	border: 1px solid #373737; color: #C5C5C5; border-radius: 6px; 
+	box-shadow: 0 0 0 1px #1A1B1C, 0 0 0 2px #1F2020, 0 3px 0 2px #080808; 
+	position: relative;
+	font-size: 16px; font-family: Helvetica;}
+.row{margin: 20px; }
+.row .key{margin: 0 10px; }
+.key img{width: 16px; height: 16px; position: absolute; left: 4px; bottom: 2px;}
+.key .text{position: absolute; left: 4px; top: 2px; }
